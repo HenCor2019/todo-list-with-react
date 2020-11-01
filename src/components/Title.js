@@ -1,21 +1,20 @@
 import React from 'react';
-
-/*
 import styled from 'styled-components';
 
 const H1 = styled.h1`
     font-family: 'Courier New' , Courier , Monospace;
-    font-size: 3em;
-    padding: 4%;
+    font-size: 7em;
+    text-align: center;
+    padding: 3%;
+    margin: 0;
 
 `;
-*/
 
 function Title({titleApp}){
     return(
-        <h1>
+        <H1>
             {titleApp}
-        </h1>
+        </H1>
     );
 };
 
