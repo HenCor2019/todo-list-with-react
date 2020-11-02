@@ -12,32 +12,43 @@ const Form = ({tasks , setTasks, id, setId, title, setTitle }) => {
 
   const submitTask = (e) => {
     e.preventDefault();
-    const newTask = {
-      id: id,
-      todo: title 
-    } 
 
-    const totalTask = tasks.concat(newTask)
-    setTasks(totalTask)
-    setTitle('')
-    setId(id+1)
-    
-   // console.log(tasks);
-  } 
+    if(title !== ''){
+      
+      const newTask = {
+        id: id,
+        todo: title, 
+        done: false,
+      } 
+
+      const totalTask = tasks.concat(newTask)
+      setTasks(totalTask)
+      setTitle('')
+      setId(id+1)
+      
+     // console.log(tasks);
+      }
+  }
 
   const ButtonWrapper = styled.button`
-      background-color: #825AC2; 
+      font-family: 'Oswald', sans-serif;
+      background-color: #898b8a; 
       color: #eeeeee;
   `;
 
     return(
-      <form className='mx-auto container'>
+      <form className='mx-auto container' >
         <div className="form-row justify-content-center align-items-center pl-4">
           <div className="col-6">
-            <input id="title" value={title} className='form-control' onChange={inputTextHandler} />
-          </div>
+            <input 
+              id="title"
+              value={title}
+              className='form-control'
+              placeholder='Ingresa un tarea pendiente'
+              onChange={inputTextHandler} />
+            </div>
           <div className="col-2 d-flex justify-content-end pr-1 ">
-            <ButtonWrapper type="submit" className='btn' onClick={submitTask}>Agregar</ButtonWrapper>
+            <ButtonWrapper type="submit" className='btn text-uppercase' onClick={submitTask}>Agregar</ButtonWrapper>
           </div>
         </div>
       </form>

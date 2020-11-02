@@ -8,7 +8,7 @@ function List( { setTitle, tasks, setTasks} ) {
    return (
        <div className='container mt-4'>
            <ul className='d-flex justify-content-center align-items-center flex-column px-2'>
-               { tasks.map(task => <Card key={task.id} title={task.todo} id={task.id} tasks={tasks} setTasks={setTasks}/>
+               { tasks.map(task => <Card key={task.id} task={task} tasks={tasks} setTasks={setTasks}/>
     )
                }
            </ul>

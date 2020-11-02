@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const H1 = styled.h1`
-    font-family: 'Courier New' , Courier , Monospace;
+    font-family: 'Lobster' , Courier , cursive;
     font-size: 7em;
     text-align: center;
     padding: 3%;
