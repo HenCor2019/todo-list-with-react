@@ -4,12 +4,20 @@ import styled from 'styled-components';
 
 const Form = ({tasks , setTasks, id, setId, title, setTitle }) => {
 
+
+  /**
+   *  funcion que se encarga de actualizar lo que se esta guardando
+  */
+
   const inputTextHandler = (e) => {
     const value = e.target.value;
     console.log(value);
     setTitle(value)
   }
 
+  /**
+   * Funcion que se encarga de enviar y actualizar las lista de todo. 
+  */
   const submitTask = (e) => {
     e.preventDefault();
 
@@ -26,14 +34,21 @@ const Form = ({tasks , setTasks, id, setId, title, setTitle }) => {
       setTitle('')
       setId(id+1)
       
-     // console.log(tasks);
       }
   }
 
+  /**
+   * Estilo del boton 
+  */
   const ButtonWrapper = styled.button`
       font-family: 'Oswald', sans-serif;
       background-color: #898b8a; 
       color: #eeeeee;
+
+      :hover {
+        background-color: #636363; 
+        color: #eeeeee;
+      }
   `;
 
     return(
