@@ -29,30 +29,42 @@ function Card({ task, tasks, setTasks }) {
     const ITrash = styled.i`
         color: ${task.done ? '#fae0df;' : '#898b8a;'}
         font-size: 1.3em;
+        cursor: pointer;
+
+        :hover {
+            font-size: 1.41em;
+            color: #fa7f72;
+        }
     `;
 
     const H5 = styled.h5`
-        color: ${task.done ? '#f6f5f1;' : '#fae0df;'}
+        color: ${task.done ? '#e3e2de;' : '#fae0df;'}
         text-decoration: ${task.done ? 'line-through;' : 'none;'}
     `;
 
     const IState = styled.i`
         color: ${task.done ? '#f6f5f1;' : '#fae0df;'}
         font-size: 1.3em;
+        cursor: pointer;
+
+        :active {
+            font-size: 1.4em;
+        }
+
     `;
 
     const Li = styled.li`
         font-family: 'Oswald', sans-serif;
-        background-color: #214252;
+        background-color: ${task.done ? '#476473;' : '#214252;'}
         box-shadow: -1px 1px 3px #848484;
         border: 1px solid #BDBDBD;
-        height: 2.34em;
+        height: 3.34em;
     `;
 
     return (
-        <Li className='rounded text-decoration-none d-flex justify-content-between  align-items-center w-75 my-2'>
+        <Li className='text-truncate rounded text-decoration-none d-flex justify-content-between  align-items-center w-75 my-2'>
             <IState className={`pl-4 fa fa-${task.done ? 'check': 'square'}`} onClick={completeTask}  aria-hidden="true"></IState>
-            <H5 className={`${task.done ? 'text-muted' : ''}`}>{task.todo}</H5>
+            <H5 className={`${task.done ? '' : ''} `}>{task.todo}</H5>
             <ITrash onClick={onDeleteTasks} className="fa fa-trash pr-4" aria-hidden="true"></ITrash>
         </Li>
     )
