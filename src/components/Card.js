@@ -64,7 +64,7 @@ function Card({ task, tasks, setTasks }) {
     return (
         <Li className='text-truncate rounded text-decoration-none d-flex justify-content-between  align-items-center w-75 my-2'>
             <IState className={`pl-4 fa fa-${task.done ? 'check': 'square'}`} onClick={completeTask}  aria-hidden="true"></IState>
-            <H5 className={`${task.done ? '' : ''} `}>{task.todo}</H5>
+            <H5>{task.todo}</H5>
             <ITrash onClick={onDeleteTasks} className="fa fa-trash pr-4" aria-hidden="true"></ITrash>
         </Li>
     )
