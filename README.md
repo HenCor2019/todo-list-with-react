@@ -24,5 +24,5 @@
 ![Marcada como hecha](./src/img/hecha-final.png)
 
 <a name='eliminar-tarea'></a>
-### Pagina de inicio
+### Eliminar una tarea
 ![Eliminar tarea](./src/img/borrar.png)
